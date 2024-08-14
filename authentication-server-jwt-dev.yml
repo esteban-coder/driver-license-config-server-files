@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://esteban:esteban@localhost:27017/mitocode?authSource=admin
+      uri: mongodb://esteban:esteban@localhost:27017/driver-license?authSource=admin
 
 mitocode:
   security:
