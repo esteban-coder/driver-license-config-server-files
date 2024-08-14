@@ -1,0 +1,11 @@
+server:
+  port: 9088
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://esteban:esteban@localhost:27017/mitocode?authSource=admin
+
+mitocode:
+  security:
+    key: d5ae6cbc368bca70ba27f88bcfb569a41a26bc80cacf28b65757987e7679101a7bd97e46bc29fd44c2116ca83657d66646ccfa29fc86e7288fa703101b616b57b5cedab8a996bdbb496958da84d55fa7fb64488455f133f0b9df8e23202589f5
