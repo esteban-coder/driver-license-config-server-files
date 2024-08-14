@@ -1,0 +1,21 @@
+server:
+  port: ${CUSTOM.SERVER.PORT:9010}
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://esteban:esteban@localhost:27017/driver-license?authSource=admin
+
+#Actuator configuration
+info:
+  app:
+    name: User Service
+    description: Módulo de la arquitectura de Microservicios que disponibiliza la información de los usuarios
+    version: 0.0.1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+        base-path: /actuator
