@@ -15,7 +15,7 @@ spring:
             - StripPrefix=2
 
         - id: driver-license-service-route
-          uri: lb://driver-license-service
+          uri: lb://driver-license-service  # 9020
           predicates:
             - Path=/api/driver-license-service/**
           filters:
@@ -25,6 +25,13 @@ spring:
           uri: lb://driver-license-query-service # 9022
           predicates:
             - Path=/api/driver-license-query-service/**
+          filters:
+            - StripPrefix=2
+            
+        - id: driver-license-command-service-route
+          uri: lb://driver-license-command-service # 9920
+          predicates:
+            - Path=/api/driver-license-command-service/**
           filters:
             - StripPrefix=2
 

@@ -1,11 +1,11 @@
 server:
-  port: ${CUSTOM.SERVER.PORT:9022}
+  port: ${CUSTOM.SERVER.PORT:9920}
 
 ### Mongo database configuration
 spring:
   data:
     mongodb:
-      uri: ${MONGODB.URL.CONNECTION:mongodb://esteban:esteban@localhost:27018/driver-license?authSource=admin}
+      uri: ${MONGODB.URL.CONNECTION:mongodb://esteban:esteban@localhost:27017/driver-license?authSource=admin}
 
 #Actuator configuration
 info:
@@ -26,7 +26,7 @@ management:
   zipkin:
     tracing:
       endpoint: ${ZIPKIN.SERVER.HOSTNAME:http://localhost:9411/api/v2/spans}
-
+      
 # Logging Configuration
 logging:
   level:
@@ -44,3 +44,10 @@ springdoc:
     enabled: false 
     path: /openapi.yml
     # http://127.0.0.1:9020/swagger-ui/index.html
+
+# Kafka Configuration
+mitocode:
+  kafka:
+    serverHost: ${KAFKA.SERVER.HOSTNAME:127.0.0.1}
+    serverPort: 9092
+    topicName: license-topic
