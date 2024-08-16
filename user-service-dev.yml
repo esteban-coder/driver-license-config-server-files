@@ -4,7 +4,7 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb://esteban:esteban@localhost:27017/driver-license?authSource=admin
+      uri: ${MONGODB.URL.CONNECTION:mongodb://esteban:esteban@localhost:27017/driver-license?authSource=admin}
 
 #Actuator configuration
 info:
