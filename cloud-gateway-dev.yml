@@ -7,6 +7,13 @@ spring:
     gateway:
       routes:        
 
+        - id: auth-server-route
+          uri: lb://authentication-server-jwt
+          predicates:
+            - Path=/api/auth-server/**
+          filters:
+            - StripPrefix=2
+
         - id: user-service-route
           uri: lb://user-service
           predicates:

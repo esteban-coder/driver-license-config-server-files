@@ -1,6 +1,3 @@
-application:
-  author: Esteban Aliaga Geldres
-
 server:
   port: 9095
 
